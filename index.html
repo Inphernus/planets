@@ -2,13 +2,68 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite App</title>
   </head>
   <body>
-    <div id="app"></div>
-    <script type="module" src="/main.js"></script>
-    <div><h1>Frane i Dario FTW!</h1></div>
+    <header>
+      <div class="inner">
+        <div class="logo">The Planets</div>
+        <div class="burger"></div>
+        <nav>
+          <a class="active" href="#">Mercury</a>
+          <a href="#">Venus</a>
+          <a href="#">Earth</a>
+          <a href="#">Mars</a>
+          <a href="#">Juipter</a>
+          <a href="#">Saturn</a>
+          <a href="#">Uranus</a>
+          <a href="#">Neptune</a>
+        </nav>
+      </div>
+    </header>
+    <div class="divider"></div>
+    <div class="row">
+      <div class="planet-image"></div>
+      <div class="data">
+        <div class="title"></div>
+        <div class="description"></div>
+        <div class="source"></div>
+        <button>01 Overview</button>
+        <button>02 Internal Structure</button>
+        <button>03 Surface Geology</button>
+      </div>
+    </div>
+    <div class="row">
+      <div class="card rotation">
+        <div class="card-title"></div>
+        <div class="card-value">
+          <div class="value"></div>
+          <div class="unit"></div>
+        </div>
+      </div>
+      <div class="card revolution">  
+        <div class="card-title"></div>
+        <div class="card-value">
+          <div class="value"></div>
+          <div class="unit"></div>
+        </div>
+      </div>
+      <div class="card radius">
+        <div class="card-title"></div>
+        <div class="card-value">
+          <div class="value"></div>
+          <div class="unit"></div>
+        </div>
+      </div>
+      <div class="card average">
+        <div class="card-title"></div>
+        <div class="card-value">
+          <div class="value"></div>
+          <div class="unit"></div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
