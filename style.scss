@@ -84,13 +84,23 @@ nav a {
 .card {
   display: flex;
   flex-direction: column;  
-  margin: 20px;
-  align-items: center;
+  margin: 10px;
+  padding: 10px;
+  width: 100%;
+  align-items: left;
   justify-content: center;
+  border: #F2F2F2 solid 1px;
 }
 
 .card-value {
   display: flex;
+}
+.card-title {
+  font-size: 11px;
+}
+
+.card-value {
+  font-size: 30px;
 }
 
 .card-title,.card-value {
@@ -105,7 +115,9 @@ nav a {
 
 .planet-data {
   height: 20vh;
-  display: flex;
+  width: 60%;
+  display: flex;  
+  margin: auto;
   justify-content: space-between;
-  padding: 70px 250px;
+  align-items: center;  ;
 }
