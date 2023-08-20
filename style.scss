@@ -14,6 +14,15 @@ body {
   font-family: "League Spartan", sans-serif;
   font-weight: 400;
 }
+button {
+  width: 50%;
+  height: 100%;
+  text-align: left;
+  border-radius: 0;
+  border: none;
+  margin: 5px;
+  padding: 10px;
+}
 
 a {
   text-decoration: none;
@@ -44,4 +53,59 @@ nav a {
   height: 1px;
   width: auto;
   background-color: #979797;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.planet-image {
+  flex-basis: 0;
+  background-color: aqua;
+  flex-grow: 1.5;
+  height: inherit;
+}
+
+.data {
+  flex-basis: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: red;
+  flex-grow: 1;
+  height: inherit;
+  margin-left: 20px;
+  padding: 20px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;  
+  margin: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-value {
+  display: flex;
+}
+
+.card-title,.card-value {
+  color: $white-color;
+}
+
+.planet-view {
+  height: 50vh;
+  padding: 120px;
+  margin-top: 50px;
+}
+
+.planet-data {
+  height: 20vh;
+  display: flex;
+  justify-content: space-between;
+  padding: 70px 250px;
 }
