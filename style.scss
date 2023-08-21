@@ -1,5 +1,6 @@
 @import "shared/colors.scss";
-@import url("https://fonts.googleapis.com/css2?family=Antonio:wght@100&family=League+Spartan:wght@700&display=swap");
+@import "shared/typography.scss";
+@import url("https://fonts.googleapis.com/css2?family=Antonio&family=League+Spartan&display=swap");
 
 * {
   margin: 0;
@@ -9,24 +10,69 @@
 }
 
 body {
+  @include body-text;
   background-color: #070724;
   background-image: url(/shared/assets/background-stars.svg);
-  font-family: "League Spartan", sans-serif;
-  font-weight: 400;
 }
+
+p {
+  
+  @include body-text;
+}
+
+h1 {
+  @include title;
+}
+
+h2 {
+  @include sub-title;
+}
+
+h3 {
+  @include medium-text;
+}
+
+h4 {
+  @include small-text;
+}
+
 button {
-  width: 50%;
-  height: 100%;
+  @include medium-text;
+  width: 350px;
+  height: 48px;
+  flex-shrink: 0;
   text-align: left;
-  border-radius: 0;
-  border: none;
-  margin: 5px;
-  padding: 10px;
+  background: $default-button-color;
+  margin-bottom: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+button:hover {
+  background: $hover-button-color;
+}
+//Here we need to create dynamic color change
+button:active {
+  background: $mercury-button-color;
+}
+
+#span-num {
+  @include medium-text;
+  opacity: 0.5;
+  margin-left: 25px;
+  margin-right: 25px;
 }
 
 a {
   text-decoration: none;
   color: $white-color;
+}
+
+nav {
+  display: inline-flex;
+  padding-right: 0px;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 33px;
 }
 
 nav a {
@@ -41,18 +87,43 @@ nav a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
+  padding: 18px;
 }
 
 .logo {
   font-size: 28px;
-  color: $white-color;
   text-transform: uppercase;
+  margin-left: 10px;
 }
+
 .divider {
   height: 1px;
   width: auto;
-  background-color: #979797;
+  background: $white-color;
+  opacity: 0.2;
+}
+
+.title {
+  margin-bottom: 23px;
+}
+
+.description {
+  width: 350px;
+  margin-bottom: 24px;
+}
+
+.source {
+  display: inline-flex;
+  margin-bottom: 39px;
+
+  p {
+    margin-right: 2px;
+  }
+
+  a {
+    @include body-text;
+    text-decoration: underline;
+  }
 }
 
 .row {
@@ -60,47 +131,44 @@ nav a {
   align-items: center;
   justify-content: center;
 }
-
+//Here we also need to dynamicly pass image source for each picture
 .planet-image {
-  flex-basis: 0;
-  background-color: aqua;
-  flex-grow: 1.5;
-  height: inherit;
+  position: relative;
+  left: 20%;
 }
 
 .data {
   flex-basis: 0;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
-  background-color: red;
   flex-grow: 1;
-  height: inherit;
-  margin-left: 20px;
-  padding: 20px;
+  position: relative;
+  left: 554px;
 }
 
 .card {
   display: flex;
-  flex-direction: column;  
-  margin: 10px;
-  padding: 10px;
-  width: 100%;
+  flex-direction: column; 
+  width: 255px;
+  height: 128px;
+  padding-left: 23px;
+  padding-top: 1px;
   align-items: left;
   justify-content: center;
-  border: #F2F2F2 solid 1px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
 }
 
 .card-value {
-  display: flex;
+  @include sub-title;
 }
 .card-title {
-  font-size: 11px;
-}
-
-.card-value {
-  font-size: 30px;
+  @include small-text;
+  opacity: 0.5;
+  letter-spacing: 2px;
+  font-weight: 200;
+  font-size: 14px;
 }
 
 .card-title,.card-value {
@@ -110,14 +178,13 @@ nav a {
 .planet-view {
   height: 50vh;
   padding: 120px;
-  margin-top: 50px;
+  margin-top: 130px;
 }
 
 .planet-data {
-  height: 20vh;
-  width: 60%;
-  display: flex;  
-  margin: auto;
-  justify-content: space-between;
-  align-items: center;  ;
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  margin-top: 10%;
+  margin-bottom: 5%;
 }
