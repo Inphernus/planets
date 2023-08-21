@@ -1,23 +1,47 @@
-import './style.css'
-import javascriptLogo from './javascript.svg'
-import viteLogo from '/vite.svg'
+import './style.scss'
 import { setupCounter } from './counter.js'
 
-document.querySelector('#app').innerHTML = `
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="${viteLogo}" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
-      <img src="${javascriptLogo}" class="logo vanilla" alt="JavaScript logo" />
-    </a>
-    <h1>Hello Vite!</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
+document.querySelector('#planet').innerHTML = `
+  <div class="row">
+    <div class="column planet-image"></div>
+    <div class="column data">
+      <div class="title"></div>
+      <div class="description"></div>
+      <div class="source"></div>
+      <button>01 Overview</button>
+      <button>02 Internal Structure</button>
+      <button>03 Surface Geology</button>
     </div>
-    <p class="read-the-docs">
-      Click on the Vite logo to learn more
-    </p>
+  </div>
+  <div class="row">
+    <div class="card rotation">
+      <div class="card-title"></div>
+      <div class="card-value">
+        <div class="value"></div>
+        <div class="unit"></div>
+      </div>
+    </div>
+    <div class="card revolution">  
+      <div class="card-title"></div>
+      <div class="card-value">
+        <div class="value"></div>
+        <div class="unit"></div>
+      </div>
+    </div>
+    <div class="card radius">
+      <div class="card-title"></div>
+      <div class="card-value">
+        <div class="value"></div>
+        <div class="unit"></div>
+      </div>
+    </div>
+    <div class="card average">
+      <div class="card-title"></div>
+      <div class="card-value">
+        <div class="value"></div>
+        <div class="unit"></div>
+      </div>
+    </div>
   </div>
 `
 
