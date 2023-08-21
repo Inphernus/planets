@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Antonio&family=League+Spartan&display=swap');
+@import "shared/colors.scss";
+
+$title: 'Antonio', sans-serif;
+$title-font: 80px;
+
+@mixin title {
+    font-family: 'Antonio', sans-serif;
+    font-size: 100px;
+    font-weight: 500;
+    line-height: 103px;
+    color: $white;
+}
