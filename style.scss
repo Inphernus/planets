@@ -1,13 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Antonio&family=League+Spartan&display=swap");
 @import "shared/colors.scss";
-@import "shared/typography.scss";
+@import url("https://fonts.googleapis.com/css2?family=Antonio:wght@100&family=League+Spartan:wght@700&display=swap");
 
 * {
   margin: 0;
   padding: 0;
-  font-family: $title;
-  font-size: $title-font;
   box-sizing: border-box;
+  font-family: "Antonio", sans-serif;
 }
 
 body {
@@ -16,9 +14,17 @@ body {
   font-family: "League Spartan", sans-serif;
   font-weight: 400;
 }
+button {
+  width: 50%;
+  height: 100%;
+  text-align: left;
+  border-radius: 0;
+  border: none;
+  margin: 5px;
+  padding: 10px;
+}
 
 a {
-  @include title;
   text-decoration: none;
   color: $white-color;
 }
@@ -49,6 +55,53 @@ nav a {
   background-color: #979797;
 }
 
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.planet-image {
+  flex-basis: 0;
+  background-color: aqua;
+  flex-grow: 1.5;
+  height: inherit;
+}
+
+.data {
+  flex-basis: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: red;
+  flex-grow: 1;
+  height: inherit;
+  margin-left: 20px;
+  padding: 20px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;  
+  margin: 10px;
+  padding: 10px;
+  width: 100%;
+  align-items: left;
+  justify-content: center;
+  border: #F2F2F2 solid 1px;
+}
+
+.card-value {
+  display: flex;
+}
+.card-title {
+  font-size: 11px;
+}
+
+.card-value {
+  font-size: 30px;
+}
 
 .card-title,.card-value {
   color: $white-color;
