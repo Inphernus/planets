@@ -49,4 +49,19 @@ export default {
       },
     }),
   ],
+  build: {
+    rollupOptions: {
+        input: {
+            index: resolve(__dirname, 'index.html'),
+            mercury: resolve(__dirname, 'pages/mercury.html'),
+            venus: resolve(__dirname, 'pages/venus.html'),
+            earth: resolve(__dirname, 'pages/earth.html'),
+            mars: resolve(__dirname, 'pages/mars.html'),
+            jupiter: resolve(__dirname, 'pages/jupiter.html'),
+            saturn: resolve(__dirname, 'pages/saturn.html'),
+            uranus: resolve(__dirname, 'pages/uranus.html'),
+            neptune: resolve(__dirname, 'pages/neptune.html'),
+        }
+    }
+},
 };
