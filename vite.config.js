@@ -15,7 +15,7 @@ const populateContent = (content) => {
   };
 };
 const pageData = {
-  "/pages/mercury.html": {
+  "/index.html": {
     ...populateContent(planets[0]),
   },
   "/pages/venus.html": {
@@ -43,8 +43,7 @@ const pageData = {
 
 export default {
   server: {
-    port: 3000,
-    open: "/pages/mercury.html",
+    open: "/index.html",
   },
   plugins: [
     handlebars({
@@ -52,12 +51,12 @@ export default {
       context(pagePath) {
         return pageData[pagePath];
       },
-    }),
+    })
   ],
   build: {
     rollupOptions: {
       input: {
-        mercury: resolve(__dirname, "pages/mercury.html"),
+        index: resolve(__dirname, "index.html"),
         venus: resolve(__dirname, "pages/venus.html"),
         earth: resolve(__dirname, "pages/earth.html"),
         mars: resolve(__dirname, "pages/mars.html"),
