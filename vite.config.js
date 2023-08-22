@@ -12,6 +12,7 @@ const populateContent = (content) => {
     radius: content.radius,
     temperature: content.temperature,
     image: `/shared/assets/planet-${content.name.toLowerCase()}.svg`,
+    name: content.name.toLowerCase()
   };
 };
 const pageData = {

@@ -28,8 +28,9 @@ const description = document.querySelector(".description p");
 const source = document.querySelector(".source a");
 for (const button of buttons) {
   button.addEventListener("click", function () {
-    buttons.forEach((button) => button.classList.remove("active"));
-    this.classList.add("active");
+    const planetName = document.title;
+    buttons.forEach((button) => button.classList.remove(`${planetName}-active`));
+    this.classList.add(`${planetName}-active`);
     const { content, source: src } = getContent(this);
     description.textContent = content;
     source.href = src;

@@ -54,6 +54,14 @@ button {
   }
 }
 
+.mercury-active {
+  background-color: $mercury-button-color;
+}
+
+.venus-active {
+  background-color: $venus-button-color;
+}
+
 #span-num {
   @include medium-text;
   opacity: 0.5;
