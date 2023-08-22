@@ -49,7 +49,7 @@ button {
   &:hover {
     background: $hover-button-color;
   }
-  &:active {
+  &.active {
     background: $mercury-button-color;
   }
 }
