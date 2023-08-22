@@ -16,7 +16,6 @@ body {
 }
 
 p {
-  
   @include body-text;
 }
 
@@ -131,10 +130,16 @@ nav a {
   align-items: center;
   justify-content: center;
 }
-//Here we also need to dynamicly pass image source for each picture
+
 .planet-image {
   position: relative;
   left: 20%;
+  width: 290px;
+  height: 290px;
+
+  img {
+    width: 100%;
+  }
 }
 
 .data {
@@ -150,7 +155,7 @@ nav a {
 
 .card {
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
   width: 255px;
   height: 128px;
   padding-left: 23px;
@@ -171,7 +176,8 @@ nav a {
   font-size: 14px;
 }
 
-.card-title,.card-value {
+.card-title,
+.card-value {
   color: $white-color;
 }
 

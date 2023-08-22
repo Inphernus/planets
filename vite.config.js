@@ -10,7 +10,8 @@ const populateContent = (content) => {
     rotation: content.rotation,
     revolution: content.revolution,
     radius: content.radius,
-    temperature: content.temperature
+    temperature: content.temperature,
+    image: `/shared/assets/planet-${content.name.toLowerCase()}.svg`
   }
 };
 const pageData = {
