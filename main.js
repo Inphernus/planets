@@ -1,6 +1,5 @@
 import planets from "./shared/data.json";
-const getContent = (button) => {
-  const planetName = document.title;
+const getContent = (button, planetName) => {
   const buttonText = button.textContent.trim();
   const planetIndex = planets.findIndex((planet) => (planet.name === planetName));
   switch (buttonText) {
@@ -28,10 +27,10 @@ const description = document.querySelector(".description p");
 const source = document.querySelector(".source a");
 for (const button of buttons) {
   button.addEventListener("click", function () {
-    const planetName = document.title;
-    buttons.forEach((button) => button.classList.remove(`${planetName}-active`));
-    this.classList.add(`${planetName}-active`);
-    const { content, source: src } = getContent(this);
+    const planetName = document.title
+    buttons.forEach((button) => button.classList.remove(`${planetName.toLowerCase()}-active`));
+    this.classList.add(`${planetName.toLowerCase()}-active`);
+    const { content, source: src } = getContent(this, planetName);
     description.textContent = content;
     source.href = src;
   });
