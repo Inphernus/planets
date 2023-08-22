@@ -1,5 +1,5 @@
-import handlebars from 'vite-plugin-handlebars';
-import {resolve} from 'path'
+import handlebars from "vite-plugin-handlebars";
+import { resolve } from "path";
 import planets from "./shared/data.json";
 
 const populateContent = (content) => {
@@ -11,40 +11,44 @@ const populateContent = (content) => {
     revolution: content.revolution,
     radius: content.radius,
     temperature: content.temperature,
-    image: `/shared/assets/planet-${content.name.toLowerCase()}.svg`
-  }
+    image: `/shared/assets/planet-${content.name.toLowerCase()}.svg`,
+  };
 };
 const pageData = {
-  '/pages/mercury.html': {
-    ...populateContent(planets[0])
+  "/pages/mercury.html": {
+    ...populateContent(planets[0]),
   },
-  '/pages/venus.html': {
-    ...populateContent(planets[1])
+  "/pages/venus.html": {
+    ...populateContent(planets[1]),
   },
-  '/pages/earth.html': {
-    ...populateContent(planets[2])
+  "/pages/earth.html": {
+    ...populateContent(planets[2]),
   },
-  '/pages/mars.html': {
-    ...populateContent(planets[3])
+  "/pages/mars.html": {
+    ...populateContent(planets[3]),
   },
-  '/pages/jupiter.html': {
-    ...populateContent(planets[4])
+  "/pages/jupiter.html": {
+    ...populateContent(planets[4]),
   },
-  '/pages/saturn.html': {
-    ...populateContent(planets[5])
+  "/pages/saturn.html": {
+    ...populateContent(planets[5]),
   },
-  '/pages/uranus.html': {
-    ...populateContent(planets[6])
+  "/pages/uranus.html": {
+    ...populateContent(planets[6]),
   },
-  '/pages/neptune.html': {
-    ...populateContent(planets[7])
-  }
+  "/pages/neptune.html": {
+    ...populateContent(planets[7]),
+  },
 };
 
 export default {
+  server: {
+    port: 3000,
+    open: "/pages/mercury.html",
+  },
   plugins: [
     handlebars({
-        partialDirectory: resolve(__dirname, 'partials'),
+      partialDirectory: resolve(__dirname, "partials"),
       context(pagePath) {
         return pageData[pagePath];
       },
@@ -52,17 +56,16 @@ export default {
   ],
   build: {
     rollupOptions: {
-        input: {
-            index: resolve(__dirname, 'index.html'),
-            mercury: resolve(__dirname, 'pages/mercury.html'),
-            venus: resolve(__dirname, 'pages/venus.html'),
-            earth: resolve(__dirname, 'pages/earth.html'),
-            mars: resolve(__dirname, 'pages/mars.html'),
-            jupiter: resolve(__dirname, 'pages/jupiter.html'),
-            saturn: resolve(__dirname, 'pages/saturn.html'),
-            uranus: resolve(__dirname, 'pages/uranus.html'),
-            neptune: resolve(__dirname, 'pages/neptune.html'),
-        }
-    }
-},
+      input: {
+        mercury: resolve(__dirname, "pages/mercury.html"),
+        venus: resolve(__dirname, "pages/venus.html"),
+        earth: resolve(__dirname, "pages/earth.html"),
+        mars: resolve(__dirname, "pages/mars.html"),
+        jupiter: resolve(__dirname, "pages/jupiter.html"),
+        saturn: resolve(__dirname, "pages/saturn.html"),
+        uranus: resolve(__dirname, "pages/uranus.html"),
+        neptune: resolve(__dirname, "pages/neptune.html"),
+      },
+    },
+  },
 };

@@ -1,5 +1,6 @@
 @import "shared/colors.scss";
 @import "shared/typography.scss";
+@import "shared/utils.scss";
 @import url("https://fonts.googleapis.com/css2?family=Antonio&family=League+Spartan&display=swap");
 
 * {
@@ -44,21 +45,19 @@ button {
   background: $default-button-color;
   margin-bottom: 16px;
   border: 1px solid rgba(255, 255, 255, 0.5);
-}
 
-button:hover {
-  background: $hover-button-color;
-}
-//Here we need to create dynamic color change
-button:active {
-  background: $mercury-button-color;
+  &:hover {
+    background: $hover-button-color;
+  }
+  &:active {
+    background: $mercury-button-color;
+  }
 }
 
 #span-num {
   @include medium-text;
   opacity: 0.5;
-  margin-left: 25px;
-  margin-right: 25px;
+  margin: 0 25px
 }
 
 a {
@@ -72,20 +71,19 @@ nav {
   justify-content: center;
   align-items: flex-start;
   gap: 33px;
-}
 
-nav a {
-  color: $white-color;
-  font-family: "League Spartan", sans-serif;
-  font-size: 13px;
-  text-transform: uppercase;
-  padding: 12px;
+  a {
+    color: $white-color;
+    font-family: "League Spartan", sans-serif;
+    font-size: 13px;
+    text-transform: uppercase;
+    padding: 12px;
+  }
 }
 
 .inner {
-  display: flex;
+  @include flexAlign("center");
   justify-content: space-between;
-  align-items: center;
   padding: 18px;
 }
 
@@ -126,8 +124,7 @@ nav a {
 }
 
 .row {
-  display: flex;
-  align-items: center;
+  @include flexAlign(center);
   justify-content: center;
 }
 
@@ -144,9 +141,8 @@ nav a {
 
 .data {
   flex-basis: 0;
-  display: flex;
+  @include flexAlign("flex-start");
   flex-direction: column;
-  align-items: flex-start;
   justify-content: center;
   flex-grow: 1;
   position: relative;
@@ -154,13 +150,12 @@ nav a {
 }
 
 .card {
-  display: flex;
+  @include flexAlign("left");
   flex-direction: column;
   width: 255px;
   height: 128px;
   padding-left: 23px;
   padding-top: 1px;
-  align-items: left;
   justify-content: center;
   border: 1px solid rgba(255, 255, 255, 0.5);
 }
@@ -188,9 +183,8 @@ nav a {
 }
 
 .planet-data {
-  display: flex;
+  @include flexAlign("center");
   gap: 30px;
-  align-items: center;
   margin-top: 10%;
   margin-bottom: 5%;
 }
