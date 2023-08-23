@@ -152,8 +152,7 @@ nav {
   flex-direction: column;
   justify-content: center;
   flex-grow: 1;
-  position: relative;
-  left: 554px;
+  margin-left: 43%;
 }
 
 .card {
@@ -185,13 +184,12 @@ nav {
 
 .planet-view {
   height: 50vh;
-  padding: 120px;
-  margin-top: 130px;
+  margin-top: 15%;
+  margin-bottom: 15%;
 }
 
 .planet-data {
   @include flexAlign("center");
   gap: 30px;
   margin-top: 10%;
-  margin-bottom: 5%;
 }
