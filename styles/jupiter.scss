@@ -1,0 +1,13 @@
+@import "shared/colors.scss";
+
+button {
+  &.active {
+    background: $jupiter-button-color;
+  }
+  &:active {
+    background: $jupiter-button-color;
+  }
+  &:focus {
+    background: $jupiter-button-color;
+  }
+}
