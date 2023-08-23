@@ -3,7 +3,6 @@ import { resolve } from "path";
 import planets from "./shared/data.json";
 
 const populateContent = (content) => {
-  const env = process.env.NODE_ENV;
   return {
     title: content.name,
     description: content.overview.content,
@@ -13,12 +12,6 @@ const populateContent = (content) => {
     radius: content.radius,
     temperature: content.temperature,
     image: `/assets/planet-${content.name.toLowerCase()}.svg`,
-    customStyles:
-      env === "development"
-        ? `/styles/${content.name.toLowerCase()}.scss`
-        : env === "production"
-        ? `/assets/${content.name.toLowerCase()}.scss`
-        : null,
   };
 };
 const pageData = {
@@ -47,7 +40,6 @@ const pageData = {
     ...populateContent(planets[7]),
   },
 };
-console.log(pageData)
 
 export default {
   server: {
