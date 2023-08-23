@@ -13,7 +13,7 @@
 body {
   @include body-text;
   background-color: #070724;
-  background-image: url(/shared/assets/background-stars.svg);
+  background-image: url(/assets/background-stars.svg);
 }
 
 p {
@@ -46,50 +46,25 @@ button {
   margin-bottom: 16px;
   border: 1px solid rgba(255, 255, 255, 0.5);
 
-  // &:hover {
-  //   background: $hover-button-color;
-  // }
+  &:hover {
+    cursor: pointer;
+    background: $hover-button-color;
+  }
   &.active {
     background: $mercury-button-color;
   }
-}
-
-.mercury-active {
-  background-color: $mercury-button-color;
-}
-
-.venus-active {
-  background-color: $venus-button-color;
-}
-
-.earth-active {
-  background-color: $earth-button-color;
-}
-
-.mars-active {
-  background-color: $mars-button-color;
-}
-
-.jupiter-active {
-  background-color: $jupiter-button-color;
-}
-
-.saturn-active {
-  background-color: $saturn-button-color;
-}
-
-.uranus-active {
-  background-color: $uranus-button-color;
-}
-
-.neptune-active {
-  background-color: $neptune-button-color;
+  &:active {
+    background: $mercury-button-color;
+  }
+  &:focus {
+    background: $mercury-button-color;
+  }
 }
 
 #span-num {
   @include medium-text;
   opacity: 0.5;
-  margin: 0 25px
+  margin: 0 25px;
 }
 
 a {

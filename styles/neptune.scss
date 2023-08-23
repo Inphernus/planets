@@ -1,0 +1,13 @@
+@import "shared/colors.scss";
+
+button {
+  &.active {
+    background: $neptune-button-color;
+  }
+  &:active {
+    background: $neptune-button-color;
+  }
+  &:focus {
+    background: $neptune-button-color;
+  }
+}

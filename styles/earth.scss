@@ -1,0 +1,13 @@
+@import "shared/colors.scss";
+
+button {
+  &.active {
+    background: $earth-button-color;
+  }
+  &:active {
+    background: $earth-button-color;
+  }
+  &:focus {
+    background: $earth-button-color;
+  }
+}
