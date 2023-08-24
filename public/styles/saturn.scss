@@ -1,0 +1,13 @@
+@import "/shared/colors.scss";
+
+button {
+  &.active {
+    background: $saturn-button-color;
+  }
+  &:active {
+    background: $saturn-button-color;
+  }
+  &:focus {
+    background: $saturn-button-color;
+  }
+}

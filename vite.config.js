@@ -11,8 +11,7 @@ const populateContent = (content) => {
     revolution: content.revolution,
     radius: content.radius,
     temperature: content.temperature,
-    image: `/shared/assets/planet-${content.name.toLowerCase()}.svg`,
-    name: content.name.toLowerCase()
+    image: `/assets/planet-${content.name.toLowerCase()}.svg`,
   };
 };
 const pageData = {
@@ -49,10 +48,15 @@ export default {
   plugins: [
     handlebars({
       partialDirectory: resolve(__dirname, "partials"),
+      helpers: {
+        toLowerCase: function (str) {
+          return str.toLowerCase();
+        },
+      },
       context(pagePath) {
         return pageData[pagePath];
       },
-    })
+    }),
   ],
   build: {
     rollupOptions: {

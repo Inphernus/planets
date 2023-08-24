@@ -13,7 +13,7 @@
 body {
   @include body-text;
   background-color: #070724;
-  background-image: url(/shared/assets/background-stars.svg);
+  background-image: url(/assets/background-stars.svg);
 }
 
 p {
@@ -48,48 +48,23 @@ button {
 
   &:hover {
     cursor: pointer;
+    background: $hover-button-color;
   }
   &.active {
     background: $mercury-button-color;
   }
-}
-
-.mercury-active {
-  background-color: $mercury-button-color;
-}
-
-.venus-active {
-  background-color: $venus-button-color;
-}
-
-.earth-active {
-  background-color: $earth-button-color;
-}
-
-.mars-active {
-  background-color: $mars-button-color;
-}
-
-.jupiter-active {
-  background-color: $jupiter-button-color;
-}
-
-.saturn-active {
-  background-color: $saturn-button-color;
-}
-
-.uranus-active {
-  background-color: $uranus-button-color;
-}
-
-.neptune-active {
-  background-color: $neptune-button-color;
+  &:active {
+    background: $mercury-button-color;
+  }
+  &:focus {
+    background: $mercury-button-color;
+  }
 }
 
 #span-num {
   @include medium-text;
   opacity: 0.5;
-  margin: 0 25px
+  margin: 0 25px;
 }
 
 a {
@@ -166,8 +141,8 @@ nav {
   width: 290px;
   height: 290px;
 
-  img {
-    width: 100%;
+  .planet-img {
+     width: 100%;
   }
 }
 
@@ -176,6 +151,8 @@ nav {
   flex-basis: 0;
   flex-direction: column;
   justify-content: center;
+  flex-grow: 1;
+  margin-left: 43%;
 }
 
 .card {
@@ -207,13 +184,20 @@ nav {
 
 .planet-view {
   height: 50vh;
-  padding: 120px;
-  margin-top: 130px;
+  margin-top: 15%;
+  margin-bottom: 15%;
 }
 
 .planet-data {
   @include flexAlign("center");
   gap: 30px;
   margin-top: 10%;
-  margin-bottom: 5%;
+}
+
+.geology {
+  width: 158px;
+  height: 165px;
+  margin: 0 auto;
+  display: block;
+  transform: translateY(-4rem);
 }
