@@ -11,6 +11,7 @@ button {
     background: $uranus-button-color;
   }
 }
+
 @media only screen and (max-width: 768px) {
   .buttons-desktop {
     button {
@@ -29,4 +30,8 @@ button {
     height: 111px;
     margin: 60px 0;
   }
+  
+.planet-image {
+  width: 458px;
+  height: 458px;
 }
