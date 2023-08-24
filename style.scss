@@ -97,7 +97,8 @@ nav {
   padding-right: 5%;
 }
 .inner {
-  @include flexAlign("center");
+  display: flex;
+  align-items: center;
   justify-content: space-between;
   padding: 18px;
 }
@@ -106,6 +107,7 @@ nav {
   font-size: 28px;
   text-transform: uppercase;
   margin-left: 10px;
+  white-space: nowrap;
 }
 
 .divider {
@@ -151,7 +153,7 @@ nav {
   height: 290px;
 
   .planet-img {
-     width: 100%;
+    width: 100%;
   }
 }
 
@@ -207,4 +209,15 @@ nav {
   display: block;
   position: relative;
   bottom: 24%;
+}
+.burger {
+  display: none;
+}
+@media only screen and (max-width: 768px) {
+  .burger {
+    display: block;
+  }
+  nav {
+    display: none;
+  }
 }
