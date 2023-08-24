@@ -25,3 +25,21 @@ button {
     }
   }
 }
+@media only screen and (max-width: 768px) {
+  .buttons-desktop {
+    button {
+      &:hover,
+      &:active,
+      &.active {
+        border-bottom-color: $venus-button-color;
+      }
+    }
+  }
+
+  .planet-image {
+    left: 0;
+    width: 111px;
+    height: 111px;
+    margin: 60px 0;
+  }
+}

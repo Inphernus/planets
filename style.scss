@@ -157,6 +157,11 @@ nav {
     width: 100%;
   }
 }
+.src-img {
+  margin: auto 5px;
+  width: 12px;
+  height: 12px;
+}
 
 .data {
   @include flexAlign("flex-start");
@@ -222,6 +227,12 @@ nav {
 .buttons-mobile {
   display: none;
 }
+.desktop-text {
+  font-family: "League Spartan", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 25px;
+}
 @media only screen and (max-width: 768px) {
   .burger {
     display: block;
@@ -229,8 +240,48 @@ nav {
   nav {
     display: none;
   }
+  .geology {
+    width: auto;
+    height: 100px;
+    bottom: 30px;
+  }
   .buttons-desktop {
-    display: none;
+    width: 100%;
+    position: absolute;
+    top: 61px;
+    left: 0;
+    padding: 0 24px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 50px;
+    gap: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    span {
+      display: none;
+    }
+    button {
+      height: 100%;
+      margin-bottom: 0;
+      text-align: center;
+      border: none;
+      width: 80px;
+      font-size: 10px;
+
+      font-weight: 700;
+      letter-spacing: 1.929px;
+      opacity: 0.5;
+      .desktop-text {
+        display: none;
+      }
+      &:hover,
+      &:active,
+      &.active {
+        background-color: transparent;
+        border-bottom: 4px solid $mercury-button-color;
+        opacity: 1;
+      }
+    }
   }
   .buttons-mobile {
     padding: 0 24px;
@@ -251,7 +302,8 @@ nav {
       letter-spacing: 1.929px;
       opacity: 0.5;
       &:hover,
-      &:active {
+      &:active,
+      &.active {
         border-bottom: 4px solid $mercury-button-color;
         opacity: 1;
       }
@@ -283,10 +335,13 @@ nav {
       text-align: center;
     }
   }
+  .planet-data {
+    gap: 8px;
+  }
   .title h1 {
     font-size: 40px;
   }
-  .description  {
+  .description {
     p {
       font-size: 11px;
       line-height: 22px;
