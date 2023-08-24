@@ -16,3 +16,12 @@ button {
   width: 400px;
   height: 400px;
 }
+.buttons-mobile {
+  button {
+    background-color: transparent;
+    &:hover,
+    &:active {
+      border-bottom-color: $venus-button-color;
+    }
+  }
+}

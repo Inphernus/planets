@@ -11,3 +11,12 @@ button {
     background: $jupiter-button-color;
   }
 }
+.buttons-mobile {
+  button {
+    background-color: transparent;
+    &:hover,
+    &:active {
+      border-bottom-color: $jupiter-button-color;
+    }
+  }
+}

@@ -11,3 +11,12 @@ button {
     background: $mars-button-color;
   }
 }
+.buttons-mobile {
+  button {
+    background-color: transparent;
+    &:hover,
+    &:active {
+      border-bottom-color: $mars-button-color;
+    }
+  }
+}

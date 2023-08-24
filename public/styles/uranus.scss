@@ -11,3 +11,12 @@ button {
     background: $uranus-button-color;
   }
 }
+.buttons-mobile {
+  button {
+    background-color: transparent;
+    &:hover,
+    &:active {
+      border-bottom-color: $uranus-button-color;
+    }
+  }
+}

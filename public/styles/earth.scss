@@ -11,3 +11,12 @@ button {
     background: $earth-button-color;
   }
 }
+.buttons-mobile {
+  button {
+    background-color: transparent;
+    &:hover,
+    &:active {
+      border-bottom-color: $earth-button-color;
+    }
+  }
+}
