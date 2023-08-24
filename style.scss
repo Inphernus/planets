@@ -125,8 +125,10 @@ nav {
 }
 
 .source {
-  display: inline-flex;
+  display: flex;
   margin-bottom: 39px;
+  align-items: center;
+  gap: 4px;
 
   p {
     margin-right: 2px;
@@ -146,7 +148,7 @@ nav {
 
 .planet-image {
   position: relative;
-  left: 13%;
+  left: 10%;
   width: 290px;
   height: 290px;
 
@@ -196,7 +198,7 @@ nav {
 .planet-data {
   @include flexAlign("center");
   gap: 30px;
-  margin-top: 5%;
+  margin-top: 10%;
   padding-bottom: 6%;
 }
 
@@ -206,5 +208,5 @@ nav {
   margin: 0 auto;
   display: block;
   position: relative;
-  bottom: 24%;
+  bottom: 26%;
 }
