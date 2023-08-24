@@ -44,7 +44,7 @@ button {
   text-align: left;
   background: $default-button-color;
   margin-bottom: 16px;
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.2);
 
   &:hover {
     cursor: pointer;
@@ -88,6 +88,14 @@ nav {
   }
 }
 
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 88vh;
+  width: 90%;
+  margin: auto;
+  padding-right: 5%;
+}
 .inner {
   @include flexAlign("center");
   justify-content: space-between;
@@ -132,12 +140,13 @@ nav {
 
 .row {
   @include flexAlign(center);
-  justify-content: center;
+  justify-content: space-between;
+  padding: 7%;
 }
 
 .planet-image {
   position: relative;
-  left: 20%;
+  left: 13%;
   width: 290px;
   height: 290px;
 
@@ -148,11 +157,8 @@ nav {
 
 .data {
   @include flexAlign("flex-start");
-  flex-basis: 0;
   flex-direction: column;
-  justify-content: center;
-  flex-grow: 1;
-  margin-left: 43%;
+  justify-content: space-between;
 }
 
 .card {
@@ -163,7 +169,7 @@ nav {
   padding-left: 23px;
   padding-top: 1px;
   justify-content: center;
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .card-value {
@@ -185,13 +191,13 @@ nav {
 .planet-view {
   height: 50vh;
   margin-top: 15%;
-  margin-bottom: 15%;
 }
 
 .planet-data {
   @include flexAlign("center");
   gap: 30px;
-  margin-top: 10%;
+  margin-top: 5%;
+  padding-bottom: 6%;
 }
 
 .geology {
