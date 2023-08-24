@@ -201,9 +201,10 @@ nav {
 }
 
 .geology {
-  width: 158px;
-  height: 165px;
+  width: 163px;
+  height: 199px;
   margin: 0 auto;
   display: block;
-  transform: translateY(-4rem);
+  position: relative;
+  bottom: 24%;
 }
