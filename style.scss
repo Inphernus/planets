@@ -46,9 +46,9 @@ button {
   margin-bottom: 16px;
   border: 1px solid rgba(255, 255, 255, 0.5);
 
-  // &:hover {
-  //   background: $hover-button-color;
-  // }
+  &:hover {
+    cursor: pointer;
+  }
   &.active {
     background: $mercury-button-color;
   }
@@ -172,13 +172,10 @@ nav {
 }
 
 .data {
-  flex-basis: 0;
   @include flexAlign("flex-start");
+  flex-basis: 0;
   flex-direction: column;
   justify-content: center;
-  flex-grow: 1;
-  position: relative;
-  left: 554px;
 }
 
 .card {
