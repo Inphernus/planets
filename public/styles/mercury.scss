@@ -8,7 +8,7 @@ button {
   }
 }
 
-@media only screen and (width <= 375px) {
+@media only screen and (width <= 480px) {
   button {
     &:hover,
     &:active,

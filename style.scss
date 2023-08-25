@@ -236,7 +236,7 @@ nav {
   line-height: 25px;
 }
 
-@media only screen and (width <= 375px) {
+@media only screen and (width <= 480px) {
   .burger {
     width: 24px;
     height: 17px;
@@ -481,7 +481,7 @@ nav {
   }
 }
 
-@media only screen and (width <= 768px) and (width >= 376px) {
+@media only screen and (width <= 768px) and (width >= 481px) {
   .inner {
     padding: 0;
     flex-direction: column;

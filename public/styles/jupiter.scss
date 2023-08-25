@@ -13,7 +13,7 @@ button {
   height: 458px;
 }
 
-@media only screen and (width <= 375px) {
+@media only screen and (width <= 480px) {
     button {
       &:hover,
       &:active,
@@ -22,7 +22,7 @@ button {
       }
     }
   
-    
+
   .planet-image {
     left: 0;
     width: 224px;
