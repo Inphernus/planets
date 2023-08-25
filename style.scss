@@ -163,6 +163,11 @@ nav {
     width: 100%;
   }
 }
+.src-img {
+  margin: auto 5px;
+  width: 12px;
+  height: 12px;
+}
 
 .src-img {
   margin: auto 5px;
@@ -224,42 +229,31 @@ nav {
   position: relative;
   bottom: 26%;
 }
-
 .burger {
   display: none;
 }
-
 .buttons-desktop {
   display: flex;
   flex-direction: column;
 }
-
-.buttons-mobile {
-  display: none;
-}
-
 .desktop-text {
   font-family: "League Spartan", sans-serif;
   font-size: 12px;
   font-weight: 700;
   line-height: 25px;
 }
-
 @media only screen and (max-width: 375px) {
   .burger {
     display: block;
   }
-
   nav {
     display: none;
   }
-
   .geology {
     width: auto;
     height: 100px;
     bottom: 30px;
   }
-
   .buttons-desktop {
     width: 100%;
     position: absolute;
@@ -272,11 +266,9 @@ nav {
     height: 50px;
     gap: 20px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-
     span {
       display: none;
     }
-
     button {
       height: 100%;
       margin-bottom: 0;
@@ -288,11 +280,9 @@ nav {
       font-weight: 700;
       letter-spacing: 1.929px;
       opacity: 0.5;
-
       .desktop-text {
         display: none;
       }
-
       &:hover,
       &:active,
       &.active {
@@ -302,92 +292,51 @@ nav {
       }
     }
   }
-
-  .buttons-mobile {
-    padding: 0 24px;
-    display: flex;
-    justify-content: space-between;
-    height: 50px;
-    gap: 20px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-
-    button {
-      height: 100%;
-      margin-bottom: 0;
-      text-align: center;
-      border: none;
-      width: 80px;
-      font-size: 10px;
-      background-color: transparent;
-      font-weight: 700;
-      letter-spacing: 1.929px;
-      opacity: 0.5;
-
-      &:hover,
-      &:active,
-      &.active {
-        border-bottom: 4px solid $mercury-button-color;
-        opacity: 1;
-      }
-    }
-  }
-
   .container {
     padding: 0;
   }
-
   .row {
     flex-direction: column;
     align-items: center;
     margin: 0;
   }
-
   .planet-view {
     height: auto;
   }
-
   .planet-image {
     left: 0;
     width: 111px;
     height: 111px;
     margin: 60px 0;
   }
-
   .data {
     flex-direction: column;
     display: flex;
     justify-content: center;
     align-items: center;
-
-    .description {
+    &.description {
       text-align: center;
     }
   }
-
   .planet-data {
     gap: 8px;
   }
-
   .title h1 {
     font-size: 40px;
   }
-
   .description {
     p {
       font-size: 11px;
       line-height: 22px;
     }
-
     width: 100%;
     word-wrap: break-word;
   }
-
   .source p,
   .source a {
     opacity: 0.5;
     font-size: 12px;
   }
-
   .card {
     width: 100%;
     flex-direction: row;
@@ -395,11 +344,9 @@ nav {
     align-items: center;
     justify-content: space-between;
     padding: 0 30px;
-
     .card-title {
       font-size: 8px;
     }
-
     .card-value {
       .value {
         font-size: 20px;
