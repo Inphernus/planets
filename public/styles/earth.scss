@@ -1,17 +1,19 @@
-@import "/shared/colors.scss";
+@import "/shared/colors";
 
 button {
-  &.active {
-    background: $earth-button-color;
-  }
-  &:active {
-    background: $earth-button-color;
-  }
+  &:active,
+  &.active,
   &:focus {
     background: $earth-button-color;
   }
 }
-@media only screen and (max-width: 375px) {
+
+.planet-image {
+  width: 450px;
+  height: 450px;
+}
+
+@media only screen and (width <= 375px) {
   .buttons-desktop {
     button {
       &:hover,
@@ -28,8 +30,4 @@ button {
     height: 111px;
     margin: 60px 0;
   }
-}
-.planet-image {
-  width: 450px;
-  height: 450px;
 }

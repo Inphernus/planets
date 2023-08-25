@@ -1,4 +1,4 @@
-//Active button color for each planet
+// Active button color for each planet
 $mercury-button-color: #419ebb;
 $venus-button-color: #eda249;
 $earth-button-color: #6d2ed5;
@@ -7,7 +7,8 @@ $jupiter-button-color: #d83a34;
 $saturn-button-color: #cd5120;
 $uranus-button-color: #1ec1a2;
 $neptune-button-color: #2d68f0;
-//Base color for buttons state
-$default-button-color: #ffffff00;
-$hover-button-color: rgb(216, 216, 216, 0.2);
-$white-color: #ffffff;
+
+// Base color for buttons state
+$default-button-color: #fff0;
+$hover-button-color: rgb(216 216 216 / 20%);
+$white-color: #fff;
