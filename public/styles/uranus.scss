@@ -1,13 +1,9 @@
-@import "/shared/colors.scss";
+@import "/shared/colors";
 
 button {
-  &.active {
-    background: $uranus-button-color;
-  }
-  &:active {
-    background: $uranus-button-color;
-  }
-  &:focus {
+  &:active,
+  &.active,
+  &:focus  {
     background: $uranus-button-color;
   }
 }
@@ -21,6 +17,7 @@ button {
   .buttons-desktop {
     button {
       background-color: transparent;
+
       &:hover,
       &:active,
       &.active {

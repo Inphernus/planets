@@ -1,13 +1,9 @@
-@import "/shared/colors.scss";
+@import "/shared/colors";
 
 button {
-  &.active {
-    background: $saturn-button-color;
-  }
-  &:active {
-    background: $saturn-button-color;
-  }
-  &:focus {
+  &:active,
+  &.active,
+  &:focus  {
     background: $saturn-button-color;
   }
 }
@@ -25,6 +21,7 @@ button {
       }
     }
   }
+
   .planet-image {
     left: 0;
     width: 160px;

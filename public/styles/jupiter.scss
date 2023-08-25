@@ -1,12 +1,8 @@
-@import "/shared/colors.scss";
+@import "/shared/colors";
 
 button {
-  &.active {
-    background: $jupiter-button-color;
-  }
-  &:active {
-    background: $jupiter-button-color;
-  }
+  &:active,
+  &.active,
   &:focus {
     background: $jupiter-button-color;
   }
@@ -33,4 +29,3 @@ button {
     margin: 60px 0;
   }
 }
-

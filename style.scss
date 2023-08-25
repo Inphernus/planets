@@ -1,19 +1,20 @@
-@import "shared/colors.scss";
-@import "shared/typography.scss";
-@import "shared/utils.scss";
-@import url("https://fonts.googleapis.com/css2?family=Antonio&family=League+Spartan&display=swap");
+@import "shared/colors";
+@import "shared/typography";
+@import "shared/utils";
+@import "https://fonts.googleapis.com/css2?family=Antonio&family=League+Spartan&display=swap";
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Antonio", sans-serif;
+  font-family: Antonio, sans-serif;
 }
 
 body {
   @include body-text;
+
   background-color: #070724;
-  background-image: url(/assets/background-stars.svg);
+  background-image: url("/assets/background-stars.svg");
 }
 
 p {
@@ -38,13 +39,14 @@ h4 {
 
 button {
   @include medium-text;
+
   width: 350px;
   height: 48px;
   flex-shrink: 0;
   text-align: left;
   background: $default-button-color;
   margin-bottom: 16px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgb(255 255 255 / 20%);
 
   &:hover {
     cursor: pointer;
@@ -66,6 +68,7 @@ button {
 
 #span-num {
   @include medium-text;
+
   opacity: 0.5;
   margin: 0 25px;
 }
@@ -77,7 +80,7 @@ a {
 
 nav {
   display: inline-flex;
-  padding-right: 0px;
+  padding-right: 0;
   justify-content: center;
   align-items: flex-start;
   gap: 33px;
@@ -142,6 +145,7 @@ nav {
 
   a {
     @include body-text;
+
     text-decoration: underline;
   }
 }
@@ -163,11 +167,6 @@ nav {
     width: 100%;
   }
 }
-.src-img {
-  margin: auto 5px;
-  width: 12px;
-  height: 12px;
-}
 
 .src-img {
   margin: auto 5px;
@@ -176,19 +175,21 @@ nav {
 }
 
 .data {
-  @include flexAlign("flex-start");
+  @include flex-align("flex-start");
+
   flex-direction: column;
   justify-content: space-between;
 }
 
 .card {
-  @include flexAlign("left");
+  @include flex-align("left");
+
   flex-direction: column;
   width: 255px;
   height: 128px;
   padding-left: 23px;
   justify-content: center;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgb(255 255 255 / 20%);
 }
 
 .card-value {
@@ -197,6 +198,7 @@ nav {
 
 .card-title {
   @include small-text;
+
   opacity: 0.5;
   letter-spacing: 2px;
   font-weight: 200;
@@ -229,13 +231,16 @@ nav {
   position: relative;
   bottom: 26%;
 }
+
 .burger {
   display: none;
 }
+
 .buttons-desktop {
   display: flex;
   flex-direction: column;
 }
+
 .desktop-text {
   font-family: "League Spartan", sans-serif;
   font-size: 12px;
@@ -243,7 +248,6 @@ nav {
   line-height: 25px;
 }
 @media only screen and (max-width: 375px) {
-  
   .burger {
     width: 24px;
     height: 17px;
@@ -300,16 +304,15 @@ nav {
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     width: 100%;
   }
-  
   .nav-menu.active {
     right:0;
   }  
-
   .geology {
     width: auto;
     height: 100px;
     bottom: 30px;
   }
+
   .buttons-desktop {
     width: 100%;
     position: absolute;
@@ -321,10 +324,12 @@ nav {
     justify-content: space-between;
     height: 50px;
     gap: 20px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgb(255 255 255 / 20%);
+
     span {
       display: none;
     }
+
     button {
       height: 100%;
       margin-bottom: 0;
@@ -332,13 +337,14 @@ nav {
       border: none;
       width: 80px;
       font-size: 10px;
-
       font-weight: 700;
       letter-spacing: 1.929px;
       opacity: 0.5;
+
       .desktop-text {
         display: none;
       }
+
       &:hover,
       &:active,
       &.active {
@@ -348,33 +354,44 @@ nav {
       }
     }
   }
+
   .container {
     padding: 0;
   }
+
   .row {
     flex-direction: column;
     align-items: center;
     margin: 0;
   }
+
   .planet-view {
     height: auto;
     padding-bottom: 0;
   }
+
   .planet-image {
     left: 0;
     width: 111px;
     height: 111px;
     margin: 60px 0;
   }
+
   .data {
     flex-direction: column;
     display: flex;
     justify-content: center;
     align-items: center;
     &.description {
+      text-align: center;
       display: flex;
       flex-direction: column;
       align-items: center;  
+    }
+
+    .source {
+      display: flex;
+      justify-content: center;
     }
   }
 
@@ -383,20 +400,22 @@ nav {
     flex-direction: column;
     align-items: center;
   }
-
   .planet-data {
     gap: 8px;
     padding-top: 0;
   }
+
   .title h1 {
     font-size: 40px;
   }
+
   .description {
     p {
       font-size: 11px;
       line-height: 22px;
       text-align: center;
     }
+
     width: 100%;
     word-wrap: break-word;
   }
@@ -408,6 +427,7 @@ nav {
     opacity: 0.5;
     font-size: 12px;
   }
+
   .card {
     width: 100%;
     flex-direction: row;
@@ -415,9 +435,11 @@ nav {
     align-items: center;
     justify-content: space-between;
     padding: 0 30px;
+
     .card-title {
       font-size: 8px;
     }
+
     .card-value {
       .value {
         font-size: 20px;
@@ -451,7 +473,7 @@ nav {
   }
 }
 
-@media only screen and (max-width: 768px) and (min-width: 375px) {
+@media only screen and (width <= 768px) and (width >= 375px) {
   .inner {
     padding: 0;
     flex-direction: column;
@@ -467,7 +489,7 @@ nav {
   }
 
   nav a {
-    color: #ffffff;
+    color: #fff;
     font-family: "League Spartan", sans-serif;
     font-size: 11px;
     text-transform: uppercase;

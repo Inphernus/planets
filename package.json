@@ -6,10 +6,18 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "eslint": "eslint main.js",
+    "lint:fix": "npm run lint -- --fix",
+    "lint": "npx eslint --fix && npx stylelint \"**/*.scss\" --fix"
   },
   "devDependencies": {
+    "eslint": "^8.47.0",
+    "install": "^0.13.0",
+    "npm": "^9.8.1",
     "sass": "^1.66.0",
+    "stylelint": "^15.10.3",
+    "stylelint-config-standard-scss": "^10.0.0",
     "vite": "^4.4.5",
     "vite-plugin-handlebars": "^1.6.0"
   }
