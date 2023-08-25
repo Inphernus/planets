@@ -1,12 +1,8 @@
-@import "/shared/colors.scss";
+@import "/shared/colors";
 
 button {
-  &.active {
-    background: $earth-button-color;
-  }
-  &:active {
-    background: $earth-button-color;
-  }
+  &:active,
+  &.active,
   &:focus {
     background: $earth-button-color;
   }
@@ -35,4 +31,3 @@ button {
     margin: 60px 0;
   }
 }
-

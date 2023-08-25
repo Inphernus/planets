@@ -1,12 +1,8 @@
-@import "/shared/colors.scss";
+@import "/shared/colors";
 
 button {
-  &.active {
-    background: $mars-button-color;
-  }
-  &:active {
-    background: $mars-button-color;
-  }
+  &:active,
+  &.active,
   &:focus {
     background: $mars-button-color;
   }
@@ -25,6 +21,7 @@ button {
       }
     }
   }
+
   .planet-image {
     left: 0;
     width: 129px;
