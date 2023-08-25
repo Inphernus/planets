@@ -11,7 +11,7 @@ button {
     background: $mars-button-color;
   }
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 375px) {
   .buttons-desktop {
     button {
       &:hover,
@@ -21,14 +21,13 @@ button {
       }
     }
   }
-
   .planet-image {
     left: 0;
     width: 111px;
     height: 111px;
     margin: 60px 0;
   }
-
+}
 .planet-image {
   width: 336px;
   height: 336px;

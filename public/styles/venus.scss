@@ -25,7 +25,7 @@ button {
     }
   }
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 375px) {
   .buttons-desktop {
     button {
       &:hover,
@@ -41,5 +41,11 @@ button {
     width: 111px;
     height: 111px;
     margin: 60px 0;
+  }
+}
+@media only screen and (max-width: 768px) and (min-width: 375px) {
+  .planet-image {
+    width: 253px;
+    height: 253px;
   }
 }

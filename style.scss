@@ -50,12 +50,15 @@ button {
     cursor: pointer;
     background: $hover-button-color;
   }
+
   &.active {
     background: $mercury-button-color;
   }
+
   &:active {
     background: $mercury-button-color;
   }
+
   &:focus {
     background: $mercury-button-color;
   }
@@ -96,6 +99,7 @@ nav {
   margin: auto;
   padding-right: 5%;
 }
+
 .inner {
   display: flex;
   align-items: center;
@@ -165,6 +169,12 @@ nav {
   height: 12px;
 }
 
+.src-img {
+  margin: auto 5px;
+  width: 12px;
+  height: 12px;
+}
+
 .data {
   @include flexAlign("flex-start");
   flex-direction: column;
@@ -177,7 +187,6 @@ nav {
   width: 255px;
   height: 128px;
   padding-left: 23px;
-  padding-top: 1px;
   justify-content: center;
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
@@ -185,6 +194,7 @@ nav {
 .card-value {
   @include sub-title;
 }
+
 .card-title {
   @include small-text;
   opacity: 0.5;
@@ -226,16 +236,13 @@ nav {
   display: flex;
   flex-direction: column;
 }
-.buttons-mobile {
-  display: none;
-}
 .desktop-text {
   font-family: "League Spartan", sans-serif;
   font-size: 12px;
   font-weight: 700;
   line-height: 25px;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 375px) {
   .burger {
     display: block;
   }
@@ -285,32 +292,6 @@ nav {
       }
     }
   }
-  .buttons-mobile {
-    padding: 0 24px;
-    display: flex;
-    justify-content: space-between;
-    height: 50px;
-    gap: 20px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-    button {
-      height: 100%;
-      margin-bottom: 0;
-      text-align: center;
-      border: none;
-      width: 80px;
-      font-size: 10px;
-      background-color: transparent;
-      font-weight: 700;
-      letter-spacing: 1.929px;
-      opacity: 0.5;
-      &:hover,
-      &:active,
-      &.active {
-        border-bottom: 4px solid $mercury-button-color;
-        opacity: 1;
-      }
-    }
-  }
   .container {
     padding: 0;
   }
@@ -333,7 +314,7 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    .description {
+    &.description {
       text-align: center;
     }
   }
@@ -372,5 +353,135 @@ nav {
         letter-spacing: -0.75px;
       }
     }
+  }
+}
+
+@media only screen and (max-width: 768px) and (min-width: 375px) {
+  .inner {
+    padding: 0;
+    flex-direction: column;
+
+    .logo {
+      margin-top: 32px;
+      margin-bottom: 39px;
+    }
+  }
+
+  nav {
+    padding: 0 52px;
+  }
+
+  nav a {
+    color: #ffffff;
+    font-family: "League Spartan", sans-serif;
+    font-size: 11px;
+    text-transform: uppercase;
+    font-weight: 700;
+    line-height: 25px;
+    letter-spacing: 1px;
+    padding: 0;
+  }
+
+  .divider {
+    margin-top: 27px;
+  }
+
+  .planet-data {
+    flex-direction: row;
+    margin-top: 0;
+    margin-left: 39px;
+    margin-bottom: 36px;
+    gap: 11px;
+  }
+
+  .planet-view {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 112px;
+    height: auto;
+  }
+
+  .planet-image {
+    position: initial;
+    margin-bottom: 95px;
+  }
+
+  .data {
+    flex-direction: row;
+    align-items: center;
+    gap: 69px;
+  }
+
+  .data-description {
+    margin-left: 39px;
+  }
+
+  .title {
+    h1 {
+      font-size: 48px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+  }
+
+  .description {
+    p {
+      font-size: 11px;
+      font-weight: 400;
+      line-height: 22px;
+    }
+  }
+
+  .source {
+
+    p,
+    a {
+      font-size: 12px;
+    }
+  }
+
+  .row {
+    padding: 0;
+  }
+
+  button {
+    width: 281px;
+    height: 40px;
+    font-size: 9px;
+    letter-spacing: 1.929px;
+  }
+
+  .desktop-text {
+    font-size: 9px;
+    letter-spacing: 1.929px;
+  }
+
+  .card-title {
+    font-size: 8px;
+    line-height: 16px;
+    letter-spacing: 0.727px;
+  }
+
+  .card-value {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.9px;
+  }
+
+  .card {
+    height: 88px;
+    width: 164px;
+  }
+
+  .container {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-right: 0;
   }
 }
