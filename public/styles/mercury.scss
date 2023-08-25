@@ -1,0 +1,19 @@
+@import "/shared/colors";
+
+button {
+  &:active,
+  &.active,
+  &:focus {
+    background: $mercury-button-color;
+  }
+}
+
+@media only screen and (width <= 375px) {
+  button {
+    &:hover,
+    &:active,
+    &.active {
+      border-bottom-color:  $mercury-button-color;
+    }
+  }
+}

@@ -13,19 +13,7 @@ button {
   height: 400px;
 }
 
-.buttons-mobile {
-  button {
-    background-color: transparent;
-
-    &:hover,
-    &:active {
-      border-bottom-color: $venus-button-color;
-    }
-  }
-}
-
 @media only screen and (width <= 375px) {
-  .buttons-desktop {
     button {
       &:hover,
       &:active,
@@ -33,7 +21,6 @@ button {
         border-bottom-color: $venus-button-color;
       }
     }
-  }
 
   .planet-image {
     left: 0;

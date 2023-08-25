@@ -12,6 +12,7 @@ const populateContent = (content) => {
     radius: content.radius,
     temperature: content.temperature,
     image: `/assets/planet-${content.name.toLowerCase()}.svg`,
+    styles: `/public/styles/${content.name.toLowerCase()}.scss`,
   };
 };
 const pageData = {
@@ -48,11 +49,6 @@ export default {
   plugins: [
     handlebars({
       partialDirectory: resolve(__dirname, "partials"),
-      helpers: {
-        toLowerCase: function (str) {
-          return str.toLowerCase();
-        },
-      },
       context(pagePath) {
         return pageData[pagePath];
       },

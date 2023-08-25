@@ -14,13 +14,11 @@ button {
 }
 
 @media only screen and (width <= 375px) {
-  .buttons-desktop {
-    button {
-      &:hover,
-      &:active,
-      &.active {
-        border-bottom-color: $mars-button-color;
-      }
+  button {
+    &:hover,
+    &:active,
+    &.active {
+      border-bottom-color: $mars-button-color;
     }
   }
 

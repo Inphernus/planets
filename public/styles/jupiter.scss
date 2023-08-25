@@ -14,7 +14,6 @@ button {
 }
 
 @media only screen and (width <= 375px) {
-  .buttons-desktop {
     button {
       &:hover,
       &:active,
@@ -22,8 +21,8 @@ button {
         border-bottom-color: $jupiter-button-color;
       }
     }
-  }
-
+  
+    
   .planet-image {
     left: 0;
     width: 224px;

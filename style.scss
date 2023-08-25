@@ -52,18 +52,6 @@ button {
     cursor: pointer;
     background: $hover-button-color;
   }
-
-  &.active {
-    background: $mercury-button-color;
-  }
-
-  &:active {
-    background: $mercury-button-color;
-  }
-
-  &:focus {
-    background: $mercury-button-color;
-  }
 }
 
 #span-num {
@@ -355,8 +343,9 @@ nav {
       &:hover,
       &:active,
       &.active {
+        border-bottom-width: 4px;
+        border-bottom-style: solid;
         background-color: transparent;
-        border-bottom: 4px solid $mercury-button-color;
         opacity: 1;
       }
     }
