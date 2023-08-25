@@ -449,8 +449,14 @@ nav {
 
   .planet-view {
     flex-direction: column;
-    margin-top: 0;
+    align-items: center;
+    margin-top: 112px;
     height: auto;
+  }
+
+  .planet-image {
+    position: initial;
+    margin-bottom: 95px;
   }
 
   .data {
@@ -524,5 +530,11 @@ nav {
 
   .container {
     width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-right: 0;
   }
 }
