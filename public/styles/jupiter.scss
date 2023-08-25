@@ -7,11 +7,13 @@ button {
     background: $jupiter-button-color;
   }
 }
+
 .planet-image {
   width: 458px;
   height: 458px;
 }
-@media only screen and (max-width: 375px) {
+
+@media only screen and (width <= 375px) {
   .buttons-desktop {
     button {
       &:hover,

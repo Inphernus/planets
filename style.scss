@@ -247,7 +247,8 @@ nav {
   font-weight: 700;
   line-height: 25px;
 }
-@media only screen and (max-width: 375px) {
+
+@media only screen and (width <= 375px) {
   .burger {
     width: 24px;
     height: 17px;
@@ -256,6 +257,7 @@ nav {
     opacity: 1;
     margin-right: 20px;
   }
+
   .burger.active {
     opacity: 0.5;
   }
@@ -277,6 +279,7 @@ nav {
     z-index: 2;
     padding: 0 24px;
   }
+
   .nav-menu-icon {
     width: 20px;
     height: 20px;
@@ -284,6 +287,7 @@ nav {
     margin-right: 25px;
     background-color: aqua;
   }
+
   .nav-item {
     display: flex;
     align-items: center;
@@ -302,12 +306,14 @@ nav {
     font-weight: 700;
     line-height: 25px; 
     letter-spacing: 1.364px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgb(255 255 255 / 20%);
     width: 100%;
   }
+
   .nav-menu.active {
     right:0;
   }  
+
   .geology {
     width: auto;
     height: 100px;
@@ -378,11 +384,16 @@ nav {
     margin: 60px 0;
   }
 
+  .source{
+    margin-bottom: 20px;
+  }
+
   .data {
     flex-direction: column;
     display: flex;
     justify-content: center;
     align-items: center;
+
     &.description {
       text-align: center;
       display: flex;
@@ -401,6 +412,7 @@ nav {
     flex-direction: column;
     align-items: center;
   }
+
   .planet-data {
     gap: 8px;
     padding-top: 0;
@@ -420,9 +432,7 @@ nav {
     width: 100%;
     word-wrap: break-word;
   }
-  .source{
-    margin-bottom: 20px;
-  }
+
   .source p,
   .source a {
     opacity: 0.5;
@@ -448,33 +458,41 @@ nav {
       }
     }
   }
+
   .mercury-color {
     background-color: $mercury-button-color;
   }
+
   .venus-color {
     background-color: $venus-button-color;
   }
+
   .earth-color {
     background-color: $earth-button-color;
   }
+
   .mars-color {
     background-color: $mars-button-color;
   }
+
   .jupiter-color {
     background-color: $jupiter-button-color;
   }
+
   .saturn-color {
     background-color: $saturn-button-color;
   }
+
   .uranus-color {
     background-color: $uranus-button-color;
   }
+
   .neptune-color {
     background-color: $neptune-button-color;
   }
 }
 
-@media only screen and (max-width: 768px) and (min-width: 376px) {
+@media only screen and (width <= 768px) and (width >= 376px) {
   .inner {
     padding: 0;
     flex-direction: column;

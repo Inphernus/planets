@@ -13,7 +13,7 @@ button {
   height: 450px;
 }
 
-@media only screen and (max-width: 375px) {
+@media only screen and (width <= 375px) {
   .buttons-desktop {
     button {
       &:hover,
