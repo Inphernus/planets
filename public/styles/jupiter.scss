@@ -11,6 +11,10 @@ button {
     background: $jupiter-button-color;
   }
 }
+.planet-image {
+  width: 458px;
+  height: 458px;
+}
 @media only screen and (max-width: 375px) {
   .buttons-desktop {
     button {
@@ -29,7 +33,4 @@ button {
     margin: 60px 0;
   }
 }
-.planet-image {
-  width: 458px;
-  height: 458px;
-}
+
