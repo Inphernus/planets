@@ -2,20 +2,23 @@ import planets from "./shared/data.json";
 const getContent = (button, planetName) => {
   const buttonText = button.textContent.trim();
   const planetIndex = planets.findIndex((planet) => planet.name === planetName);
-  switch (buttonText) {
-    case "01 Overview":
+  const overviewRegEx = /overview/i
+  const structureRegEx = /structure/i
+  const geologyRegEx = /geology/i
+  switch (true) {
+    case  overviewRegEx.test(buttonText):
       return {
         content: planets[planetIndex].overview.content,
         source: planets[planetIndex].overview.source,
         image: planets[planetIndex].images.planet,
       };
-    case "02 Internal Structure":
+    case structureRegEx.test(buttonText):
       return {
         content: planets[planetIndex].structure.content,
         source: planets[planetIndex].structure.source,
         image: planets[planetIndex].images.internal,
       };
-    case "03 Surface Geology":
+    case geologyRegEx.test(buttonText):
       return {
         content: planets[planetIndex].geology.content,
         source: planets[planetIndex].geology.source,
