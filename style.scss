@@ -247,16 +247,66 @@ nav {
   font-weight: 700;
   line-height: 25px;
 }
-
-@media only screen and (width <= 375px) {
+@media only screen and (max-width: 375px) {
   .burger {
+    width: 24px;
+    height: 17px;
     display: block;
+    cursor: pointer;
+    opacity: 1;
+  }
+  .burger.active {
+    opacity: 0.5;
+  }
+
+  .nav-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: left;
+    position: fixed;
+    top: 69px;
+    right: -100%;
+    background-color: #070724;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    text-align: center;
+    transition: 0.3s;
+    z-index: 2;
+    padding: 0 24px;
+  }
+  .nav-menu-icon {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-right: 25px;
+    background-color: aqua;
+  }
+  .nav-item {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
   }
 
   nav {
-    display: none;
+    gap: 0;
   }
 
+  nav a {
+    height: 60px;
+    padding: 0;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 25px; 
+    letter-spacing: 1.364px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    width: 100%;
+  }
+  .nav-menu.active {
+    right:0;
+  }  
   .geology {
     width: auto;
     height: 100px;
@@ -317,7 +367,7 @@ nav {
 
   .planet-view {
     height: auto;
-    margin-top: 28px;
+    padding-bottom: 0;
   }
 
   .planet-image {
@@ -332,9 +382,11 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-
-    &-description {
+    &.description {
       text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;  
     }
 
     .source {
@@ -343,8 +395,14 @@ nav {
     }
   }
 
+  .data-description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
   .planet-data {
     gap: 8px;
+    padding-top: 0;
   }
 
   .title h1 {
@@ -355,12 +413,15 @@ nav {
     p {
       font-size: 11px;
       line-height: 22px;
+      text-align: center;
     }
 
     width: 100%;
     word-wrap: break-word;
   }
-
+  .source{
+    margin-bottom: 20px;
+  }
   .source p,
   .source a {
     opacity: 0.5;
@@ -385,6 +446,30 @@ nav {
         letter-spacing: -0.75px;
       }
     }
+  }
+  .mercury-color {
+    background-color: $mercury-button-color;
+  }
+  .venus-color {
+    background-color: $venus-button-color;
+  }
+  .earth-color {
+    background-color: $earth-button-color;
+  }
+  .mars-color {
+    background-color: $mars-button-color;
+  }
+  .jupiter-color {
+    background-color: $jupiter-button-color;
+  }
+  .saturn-color {
+    background-color: $saturn-button-color;
+  }
+  .uranus-color {
+    background-color: $uranus-button-color;
+  }
+  .neptune-color {
+    background-color: $neptune-button-color;
   }
 }
 

@@ -59,3 +59,13 @@ for (const button of buttons) {
       }
   });
 }
+
+const burger = document.querySelector(".burger");
+const navMenu = document.querySelector(".nav-menu");
+
+burger.addEventListener("click", mobileMenu);
+
+function mobileMenu() {
+  navMenu.classList.toggle("active");
+  burger.classList.toggle("active")
+}
