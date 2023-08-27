@@ -2,11 +2,11 @@ import planets from "./shared/data.json";
 const getContent = (button, planetName) => {
   const buttonText = button.textContent.trim();
   const planetIndex = planets.findIndex((planet) => planet.name === planetName);
-  const overviewRegEx = /overview/i
-  const structureRegEx = /structure/i
-  const geologyRegEx = /geology/i
+  const overviewRegEx = /overview/i;
+  const structureRegEx = /structure/i;
+  const geologyRegEx = /geology/i;
   switch (true) {
-    case  overviewRegEx.test(buttonText):
+    case overviewRegEx.test(buttonText):
       return {
         content: planets[planetIndex].overview.content,
         source: planets[planetIndex].overview.source,
@@ -38,25 +38,20 @@ for (const button of buttons) {
     const planetName = document.title;
     buttons.forEach((button) => button.classList.remove("active"));
     this.classList.add("active");
-    const {
-      content,
-      source: src,
-      image,
-      geology,
-    } = getContent(this, planetName);
+    const { content, source: src, image, geology } = getContent(this, planetName);
     description.textContent = content;
     source.href = src;
     img.src = `.${image}`;
     const geo = document.querySelector(".geology");
     if (geology) {
-        geo?.remove();
-        const img = document.createElement("img");
-        img.src = `.${geology}`;
-        img.classList.add("geology");
-        document.querySelector('.planet-image').appendChild(img);
-      } else {
-        geo?.remove();
-      }
+      geo?.remove();
+      const img = document.createElement("img");
+      img.src = `.${geology}`;
+      img.classList.add("geology");
+      document.querySelector(".planet-image").appendChild(img);
+    } else {
+      geo?.remove();
+    }
   });
 }
 
@@ -67,5 +62,5 @@ burger.addEventListener("click", mobileMenu);
 
 function mobileMenu() {
   navMenu.classList.toggle("active");
-  burger.classList.toggle("active")
+  burger.classList.toggle("active");
 }

@@ -13,8 +13,7 @@ button {
   height: 450px;
 }
 
-@media only screen and (width <= 375px) {
-  .buttons-desktop {
+@media only screen and (width <= 480px) {
     button {
       &:hover,
       &:active,
@@ -22,7 +21,6 @@ button {
         border-bottom-color: $earth-button-color;
       }
     }
-  }
 
   .planet-image {
     left: 0;
