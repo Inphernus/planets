@@ -151,7 +151,6 @@ nav {
   height: 88vh;
   width: 90%;
   margin: auto;
-  padding-right: 5%;
 }
 
 .inner {
@@ -329,7 +328,7 @@ nav {
   line-height: 25px;
 }
 
-@media only screen and (width <= 480px) {
+@media only screen and (width <= 580px) {
   .inner {
     margin: 16px 24px;
     height: 36px;
@@ -341,7 +340,6 @@ nav {
     display: block;
     cursor: pointer;
     opacity: 1;
-    margin-right: 20px;
   }
 
   .burger.active {
@@ -411,12 +409,10 @@ nav {
     position: absolute;
     top: 68px;
     left: 0;
-    padding: 0 24px;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
     height: 50px;
-    gap: 20px;
     border-bottom: 1px solid rgb(255 255 255 / 20%);
 
     span {
@@ -502,10 +498,6 @@ nav {
         }
       }
     }
-  }
-
-  .container {
-    padding: 0;
   }
 
   .row {
@@ -670,7 +662,7 @@ nav {
   }
 }
 
-@media only screen and (width <= 768px) and (width >= 481px) {
+@media only screen and (width <= 1064px) and (width >= 581px) {
   .inner {
     padding: 0;
     flex-direction: column;
@@ -681,9 +673,6 @@ nav {
     }
   }
 
-  nav {
-    padding: 0 52px;
-  }
 
   nav a {
     color: #fff;
@@ -703,7 +692,6 @@ nav {
   .planet-data {
     flex-direction: row;
     margin-top: 0;
-    margin-left: 39px;
     margin-bottom: 36px;
     gap: 11px;
   }
@@ -744,7 +732,9 @@ nav {
   }
 
   .description {
+    width: auto;
     p {
+      
       font-size: 11px;
       font-weight: 400;
       line-height: 22px;
@@ -759,12 +749,13 @@ nav {
   }
 
   .row {
+    width: 100%;
     padding: 0;
   }
 
   button {
-    width: 281px;
-    height: 40px;
+    max-width: 240px;
+    max-height: 40px;
     font-size: 9px;
     letter-spacing: 1.929px;
   }
@@ -789,11 +780,10 @@ nav {
 
   .card {
     height: 88px;
-    width: 164px;
   }
 
   .container {
-    width: auto;
+    max-width: auto;
     height: auto;
     display: flex;
     flex-direction: column;
