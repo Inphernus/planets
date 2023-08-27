@@ -1,7 +1,12 @@
-@import "shared/colors";
-@import "shared/typography";
-@import "shared/utils";
+@import "colors.scss";
+@import "typography.scss";
+@import "utils.scss";
 @import "https://fonts.googleapis.com/css2?family=Antonio&family=League+Spartan&display=swap";
+
+// Base color for buttons state
+$default-button-color: #fff0;
+$hover-button-color: rgb(216 216 216 / 20%);
+$white-color: #fff;
 
 * {
   margin: 0;
@@ -51,6 +56,64 @@ button {
   &:hover {
     cursor: pointer;
     background: $hover-button-color;
+  }
+
+  &.mercury {
+    &:active,
+    &.active,
+    &:focus {
+      background-color: $mercury-button-color;
+    }
+  }
+
+  &.venus {
+    &:active,
+    &.active,
+    &:focus {
+      background-color: $venus-button-color;
+    }
+  }
+  &.earth {
+    &:active,
+    &.active,
+    &:focus {
+      background: $earth-button-color;
+    }
+  }
+  &.mars {
+    &:active,
+    &.active,
+    &:focus {
+      background: $mars-button-color;
+    }
+  }
+  &.jupiter {
+    &:active,
+    &.active,
+    &:focus {
+      background: $jupiter-button-color;
+    }
+  }
+  &.saturn {
+    &:active,
+    &.active,
+    &:focus {
+      background: $saturn-button-color;
+    }
+  }
+  &.uranus {
+    &:active,
+    &.active,
+    &:focus {
+      background: $uranus-button-color;
+    }
+  }
+  &.neptune {
+    &:active,
+    &.active,
+    &:focus {
+      background: $neptune-button-color;
+    }
   }
 }
 
@@ -148,8 +211,38 @@ nav {
 .planet-image {
   position: relative;
   left: 10%;
-  width: 290px;
-  height: 290px;
+  &--mercury {
+    width: 290px;
+    height: 290px;
+  }
+  &--venus {
+    width: 400px;
+    height: 400px;
+  }
+  &--earth {
+    width: 450px;
+    height: 450px;
+  }
+  &--mars {
+    width: 336px;
+    height: 336px;
+  }
+  &--jupiter {
+    width: 458px;
+    height: 458px;
+  }
+  &--saturn {
+    width: 458px;
+    height: 458px;
+  }
+  &--uranus {
+    width: 458px;
+    height: 458px;
+  }
+  &--neptune {
+    width: 450px;
+    height: 450px;
+  }
 
   .planet-img {
     width: 100%;
@@ -237,6 +330,11 @@ nav {
 }
 
 @media only screen and (width <= 480px) {
+  .inner {
+    margin: 16px 24px;
+    height: 36px;
+    padding: 0;
+  }
   .burger {
     width: 24px;
     height: 17px;
@@ -311,7 +409,7 @@ nav {
   .buttons-desktop {
     width: 100%;
     position: absolute;
-    top: 61px;
+    top: 68px;
     left: 0;
     padding: 0 24px;
     display: flex;
@@ -331,7 +429,8 @@ nav {
       text-align: center;
       border: none;
       width: 80px;
-      font-size: 10px;
+      font-size: 9px;
+      font-family: "League Spartan", sans-serif;
       font-weight: 700;
       letter-spacing: 1.929px;
       opacity: 0.5;
@@ -343,10 +442,64 @@ nav {
       &:hover,
       &:active,
       &.active {
-        border-bottom-width: 4px;
-        border-bottom-style: solid;
         background-color: transparent;
         opacity: 1;
+      }
+      &.mercury {
+        &:hover,
+        &:active,
+        &.active {
+          border-bottom: 4px solid $mercury-button-color;
+        }
+      }
+      &.venus {
+        &:hover,
+        &:active,
+        &.active {
+          border-bottom: 4px solid $venus-button-color;
+        }
+      }
+      &.earth {
+        &:hover,
+        &:active,
+        &.active {
+          border-bottom: 4px solid $earth-button-color;
+        }
+      }
+      &.mars {
+        &:hover,
+        &:active,
+        &.active {
+          border-bottom: 4px solid $mars-button-color;
+        }
+      }
+      &.jupiter {
+        &:hover,
+        &:active,
+        &.active {
+          border-bottom: 4px solid $jupiter-button-color;
+        }
+      }
+      &.saturn {
+        &:hover,
+        &:active,
+        &.active {
+          border-bottom: 4px solid $saturn-button-color;
+        }
+      }
+      &.uranus {
+        &:hover,
+        &:active,
+        &.active {
+          border-bottom: 4px solid $uranus-button-color;
+        }
+      }
+      &.neptune {
+        &:hover,
+        &:active,
+        &.active {
+          border-bottom: 4px solid $neptune-button-color;
+        }
       }
     }
   }
@@ -364,13 +517,43 @@ nav {
   .planet-view {
     height: auto;
     padding-bottom: 0;
+    margin-top: 7%;
   }
 
   .planet-image {
     left: 0;
-    width: 111px;
-    height: 111px;
-    margin: 60px 0;
+    margin-top: 95px;
+    margin-bottom: 98px;
+
+    &--mercury {
+      width: 111px;
+      height: 111px;
+    }
+    &--venus {
+      width: 154px;
+      height: 154px;
+    }
+    &--earth,
+    &--neptune {
+      width: 173px;
+      height: 173px;
+    }
+    &--mars {
+      width: 129px;
+      height: 129px;
+    }
+    &--jupiter {
+      width: 224px;
+      height: 224px;
+    }
+    &--saturn {
+      width: 256px;
+      height: 256px;
+    }
+    &--uranus {
+      width: 176px;
+      height: 176px;
+    }
   }
 
   .source {
@@ -383,16 +566,18 @@ nav {
     justify-content: center;
     align-items: center;
 
-    &.description {
+    .description {
       text-align: center;
       display: flex;
       flex-direction: column;
       align-items: center;
+      margin-bottom: 32px;
     }
 
     .source {
       display: flex;
       justify-content: center;
+      margin-bottom: 28px;
     }
   }
 
@@ -407,8 +592,12 @@ nav {
     padding-top: 0;
   }
 
-  .title h1 {
-    font-size: 40px;
+  .title {
+    margin-bottom: 16px;
+    h1 {
+      font-size: 40px;
+      line-height: normal;
+    }
   }
 
   .description {
@@ -431,10 +620,10 @@ nav {
   .card {
     width: 100%;
     flex-direction: row;
-    height: auto;
+    height: 48px;
     align-items: center;
     justify-content: space-between;
-    padding: 0 30px;
+    padding: 9px 24px 13px 24px;
 
     .card-title {
       font-size: 8px;
@@ -529,6 +718,10 @@ nav {
   .planet-image {
     position: initial;
     margin-bottom: 95px;
+    &--venus {
+      width: 253px;
+      height: 253px;
+    }
   }
 
   .data {
